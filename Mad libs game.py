@@ -12,4 +12,7 @@ And example code on Github.
 
 """
 
+what_is_in_your_mind_input = input("what's on your mind today? \n")
+check_count = len(what_is_in_your_mind_input.split(" "))
 
+print("oh nice, you just told me what's on your mind in {} words!".format(check_count))
