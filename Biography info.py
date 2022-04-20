@@ -15,7 +15,7 @@ At the end you print a summary that looks like this:
 - Personal goals: To be the best programmer there ever was.
 
 """
-
+i = 0
 while True:
     user_input = input("Please enter your sentence to build biography: ")
     name, date_of_birth, address, personal_goals = user_input.split(",")
@@ -26,4 +26,5 @@ while True:
         print("- Personal goals:{}".format(personal_goals))
         break
     else:
-        print("You entered incorrect username! ")
+        i = i + 1
+        print("You entered incorrect username , please enter valid name again")
