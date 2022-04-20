@@ -16,3 +16,7 @@ At the end you print a summary that looks like this:
 
 """
 
+while True:
+    user_input = input("Please enter your sentence to build biography: ")
+    print("- Name: {}".format(user_input))
+    break
