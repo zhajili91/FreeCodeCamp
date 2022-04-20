@@ -19,8 +19,11 @@ At the end you print a summary that looks like this:
 while True:
     user_input = input("Please enter your sentence to build biography: ")
     name, date_of_birth, address, personal_goals = user_input.split(",")
-    print("- Name: {}".format(name))
-    print("- Date of birth: {}".format(date_of_birth))
-    print("- Address:{}".format(address))
-    print("- Personal goals:{}".format(personal_goals))
-    break
+    if "*" not in name:
+        print("- Name: {}".format(name))
+        print("- Date of birth: {}".format(date_of_birth))
+        print("- Address:{}".format(address))
+        print("- Personal goals:{}".format(personal_goals))
+        break
+    else:
+        print("You entered incorrect username! ")
