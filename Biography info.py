@@ -25,16 +25,15 @@ i = 0
 while True:
     user_input = input("Please enter your sentence to build biography! ")
     name, date_of_birth, address, personal_goals = user_input.split(",")
-
     # Validating if string format represent correct date format
     try:
         validate_date = bool(datetime.strptime(date_of_birth, format_date))
     except ValueError:
         validate_date = False
-        print("Please enter correct date format")
-
+        print("Incorrect date format")
+        continue  # to go back to beginning of code
     # Validating if string does not contain any special characters.
-    if not special_char.search(name):
+    if special_char.search(name) is None:
         print("- Name: {}".format(name))
         print("- Date of birth: {}".format(date_of_birth))
         print("- Address:{}".format(address))
