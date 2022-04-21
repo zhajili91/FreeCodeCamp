@@ -30,17 +30,23 @@ while True:
         validate_date = bool(datetime.strptime(date_of_birth, format_date))
     except ValueError:
         validate_date = False
-        print("Incorrect date format")
-        continue  # to go back to beginning of code
+        # print("Incorrect date format")
+        # continue  # to go back to beginning of code
     # Validating if string does not contain any special characters.
-    if special_char.search(name) is None:
+    if validate_date is False:
+        print("Incorrect date format")
+        i = i + 1
+        if i == 3:
+            print("Too many attempts ,come later and check again")
+            break
+    elif special_char.search(name) is None:
         print("- Name: {}".format(name))
         print("- Date of birth: {}".format(date_of_birth))
         print("- Address:{}".format(address))
         print("- Personal goals:{}".format(personal_goals))
         break
     else:
-        print("The name you entered has special character")
+        print("Special character detected on the name!")
         i = i + 1
         if i == 3:
             print("Too many attempts ,come later and check again")
