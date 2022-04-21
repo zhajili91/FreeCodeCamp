@@ -15,18 +15,31 @@ At the end you print a summary that looks like this:
 - Personal goals: To be the best programmer there ever was.
 
 """
+from datetime import datetime
+from string import printable
+
+format_date = "%d-%m-%Y"
 i = 0
 while True:
     user_input = input("Please enter your sentence to build biography: ")
     name, date_of_birth, address, personal_goals = user_input.split(",")
-    if "*" not in name:
+
+# Validating if string format represent correct date format
+    try:
+        validate_date = bool(datetime.strptime(date_of_birth, format_date))
+    except ValueError:
+        validate_date = False
+        print("Please enter correct date format")
+
+# Validating if string does not contain any special characters.
+    if set(name).difference(printable):
         print("- Name: {}".format(name))
         print("- Date of birth: {}".format(date_of_birth))
         print("- Address:{}".format(address))
         print("- Personal goals:{}".format(personal_goals))
         break
     else:
-        print("You entered incorrect username , please enter valid name again")
+        print("The name you entered has special character")
         i = i + 1
         if i == 3:
             print("Too many attempts ,come later and check again")
