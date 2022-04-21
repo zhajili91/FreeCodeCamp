@@ -26,6 +26,8 @@ while True:
         print("- Personal goals:{}".format(personal_goals))
         break
     else:
-        i = i + 1
         print("You entered incorrect username , please enter valid name again")
-#comment
+        i = i + 1
+        if i == 3:
+            print("Too many attempts ,come later and check again")
+            break
