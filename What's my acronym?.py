@@ -5,6 +5,7 @@ Input -> As Soon As Possible. Output -> ASAP.
 Input -> World Health Organization. Output -> WHO.
 Input -> Absent Without Leave. Output -> AWOL.
 """
+#fixing the bug for different letter issue
 
 acronym = ""
 input_the_sentence = input("Please enter a sentence to generate Acronym: ")
