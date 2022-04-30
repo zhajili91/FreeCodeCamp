@@ -17,3 +17,6 @@ computer_action = random.choice(possible_actions) # creating computer action wit
 # list will be used as argument
 
 print("\nYou are choosing {}".format(user_action),"computer is choosing {}\n".format(computer_action))
+
+if user_action == computer_action:
+    print("Both computer and user selected same action ,this is tie :) ")
