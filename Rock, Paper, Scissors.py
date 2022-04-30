@@ -16,4 +16,4 @@ possible_actions = ["rock", "paper", "scissors"]  # all possible choices to be u
 computer_action = random.choice(possible_actions) # creating computer action with random module ,possible actions
 # list will be used as argument
 
-print("\nYou are choosing".format(user_action), "computer is choosing ".format(computer_action))
+print("\nYou are choosing {}".format(user_action),"computer is choosing {}\n".format(computer_action))
